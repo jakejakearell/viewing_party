@@ -72,9 +72,24 @@ describe "As an authenticated user, when I visit the movies detail page I see" d
       expect(page).to have_button('Create Viewing Party for Movie')
 
       click_button 'Create Viewing Party for Movie'
-  
+
       expect(current_path).to eq(new_viewing_event_path)
       expect(page).to have_content("#{@find_movie.title}")
+    end
+  end
+
+  it "shows the youtube trailer when available" do
+    @user_2 = User.create!(email: 'grumpy@email.com', password: 'grumpyperson1')
+    @user_3 = User.create!(email: 'sleepy@email.com', password: 'sleepyperson1')
+    @friend_1 = Friend.create!(follower_id: @user_1.id, followed_id: @user_2.id)
+    @friend_2 = Friend.create!(follower_id: @user_1.id, followed_id: @user_3.id)
+
+    VCR.use_cassette('single_movie_show_page_reviews') do
+      visit movie_path(@find_movie.id)
+
+      within ".trailer" do
+        expect(page).to have_content("#{trailer.youtube}")
+      end
     end
   end
 end
