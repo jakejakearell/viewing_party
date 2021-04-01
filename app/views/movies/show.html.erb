@@ -30,6 +30,7 @@
 <section class="trailer">
   <h3>Trailers</h3>
   <% @trailers.each do |trailer| %>
+    <a href="https://www.youtube.com/watch?v=<%= trailer.key %>">Trailer</a><br>
     <iframe width="320" height="240" src="http://www.youtube.com/embed/<%= trailer.key %>" frameborder="0"></iframe><br>
   <% end %>
 </section>

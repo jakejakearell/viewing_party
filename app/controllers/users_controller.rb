@@ -4,18 +4,11 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = user_params
-    user[:email] = user[:email].downcase
-    new_user = User.new(user)
-
+    new_user = User.new(user_params)
     if new_user.save
       flash[:message] = "Welcome to Viewing Party, #{new_user.email}"
       session[:user_id] = new_user.id
       redirect_to dashboard_index_path
-    elsif new_user.errors[:email].empty?
-      flash[:error] = new_user.errors.full_messages.to_sentence
-      @user = User.new(email: new_user.email)
-      render :new
     else
       flash[:error] = new_user.errors.full_messages.to_sentence
       @user = User.new
@@ -26,6 +19,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
+    params[:user][:email] = params[:user][:email].downcase
     params.require(:user).permit(:email, :password, :password_confirmation)
   end
 end
