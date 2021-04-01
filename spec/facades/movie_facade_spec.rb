@@ -26,5 +26,18 @@ RSpec.describe MoviesFacade do
       expect(result[0]).to be_an(Film)
       expect(result[0].title).to eq('Pulp Fiction')
     end
+
+    it "called Facade movie_search and gets data" do
+
+      VCR.use_cassette('green mile trailers') do
+        green_mile_movie_id = 497
+        result = MoviesFacade.movie_videos(green_mile_movie_id)
+
+        expect(result).to be_an(Array)
+        expect(result[0]).to be_an(Trailer)
+        expect(result[0].size.class).to eq(Integer)
+        expect(result[0].key.class).to eq(String)
+      end
+    end
   end
 end

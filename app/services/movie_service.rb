@@ -30,4 +30,15 @@ class MovieService
     response = conn.get("movie/#{id}/reviews")
     JSON.parse(response.body, symbolize_names: true)[:results]
   end
+
+  def self.trailer_data(id)
+    response = conn.get("movie/#{id}/videos")
+    JSON.parse(response.body, symbolize_names: true)[:results]
+  end
+
+  def self.valid_trailers(id)
+    trailer_data(id).find_all do |info|
+      info[:site] == "YouTube" && info[:type] == "Trailer"
+    end
+  end
 end

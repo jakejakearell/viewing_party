@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/497/videos?api_key=Movie_Key&language=en-US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Thu, 01 Apr 2021 00:28:19 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=21600
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - 34f1af7054749343006b99e125a63bb16b1d4f91
+      X-Memc-Age:
+      - '12712'
+      X-Memc-Expires:
+      - '8888'
+      Etag:
+      - W/"945c3ec1660323484ca9d4086fc27f9b"
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 c29390732f5bc4b2c7832623ae6e492f.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - jP10Y1cdtIvQjYCBBn4LbyvL_FReFrxYti-Vdxa2T7Hz5XqrfdELjw==
+      Age:
+      - '1797'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6NDk3LCJyZXN1bHRzIjpbeyJpZCI6IjUzM2VjNjU0YzNhMzY4NTQ0ODAwMDM5YSIsImlzb182MzlfMSI6ImVuIiwiaXNvXzMxNjZfMSI6IlVTIiwia2V5IjoiY3RSSy00VnQ3ZEEiLCJuYW1lIjoiVGhlIEdyZWVuIE1pbGUgVHJhaWxlciBbSERdIiwic2l0ZSI6IllvdVR1YmUiLCJzaXplIjozNjAsInR5cGUiOiJUcmFpbGVyIn0seyJpZCI6IjVjODAxZDhmMGUwYTI2NDMxMDVjOWEzMyIsImlzb182MzlfMSI6ImVuIiwiaXNvXzMxNjZfMSI6IlVTIiwia2V5IjoicUpSeFJQclRHVlkiLCJuYW1lIjoiVGhlIEdyZWVuIE1pbGUg4omjIDE5OTkg4omjIFRyYWlsZXIiLCJzaXRlIjoiWW91VHViZSIsInNpemUiOjcyMCwidHlwZSI6IlRyYWlsZXIifV19
+  recorded_at: Thu, 01 Apr 2021 00:58:16 GMT
+recorded_with: VCR 6.0.0
