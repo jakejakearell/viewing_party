@@ -38,7 +38,7 @@ class MovieService
 
   def self.valid_trailers(id)
     trailer_data(id).find_all do |info|
-      info[:site] == "YouTube" && info[:type] == "Trailer"
+      info[:site] == 'YouTube' && info[:type] == 'Trailer'
     end
   end
 end

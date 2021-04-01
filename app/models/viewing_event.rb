@@ -1,7 +1,7 @@
 class ViewingEvent < ApplicationRecord
   belongs_to :user
   belongs_to :movie
-  has_many :viewers
+  has_many :viewers, dependent: :destroy
   has_many :users, through: :viewers
 
   validates :duration, :start_date, :start_date_time, presence: true

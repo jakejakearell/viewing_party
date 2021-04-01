@@ -19,22 +19,25 @@
 
 <section class="viewing-events">
   <h2>Viewing Parties</h2>
-
   <% if current_user.viewing_events %>
     <% current_user.viewing_events.each do |event| %>
-      <%= event.movie.title %>
-      <%= event.start_date.strftime("%B %d, %Y") %>
-      <%= event.start_date_time %>
-      <p>Hosting</p>
+      <div style="border: 5px solid gray">
+        <b><%= event.movie.title %><br></b>
+        Date: <%= event.start_date.strftime("%B %d, %Y") %><br>
+        Start time: <%= event.start_date_time.strftime("%I:%M %p") %>
+        <p>Hosting</p>
+      </div><br>
     <% end %>
   <% end %>
 
   <% if current_user.viewers %>
     <% current_user.viewers.each do |viewer| %>
-      <%= viewer.viewing_event.movie.title %>
-      <%= viewer.viewing_event.start_date.strftime("%B %d, %Y") %>
-      <%= viewer.viewing_event.start_date_time %>
-      <p>Invited</p>
+      <div style="border: 5px solid gray">
+        <b><%= viewer.viewing_event.movie.title %></b><br>
+        Date: <%= viewer.viewing_event.start_date.strftime("%B %d, %Y") %><br>
+        Start time: <%= viewer.viewing_event.start_date_time.strftime("%I:%M %p") %>
+        <p>Invited</p>
+      </div><br>
     <% end %>
   <% end %>
 </section>

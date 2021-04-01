@@ -6,8 +6,7 @@ class ViewingEventsController < ApplicationController
   def create
     viewing_event = ViewingEvent.new(viewing_event_params)
     if viewing_event.save && params[:friends]
-      Viewer.create_event_viewers(params[:friends], viewing_event.id)
-      redirect_to dashboard_index_path
+      create_event_and_viewers(params[:friends], viewing_event.id)
     elsif viewing_event.save
       redirect_to dashboard_index_path
     else
@@ -16,6 +15,11 @@ class ViewingEventsController < ApplicationController
       render :new
     end
     session.delete(:movie_info)
+  end
+
+  def create_event_and_viewers(friends, viewing_event_id)
+    Viewer.create_event_viewers(friends, viewing_event_id)
+    redirect_to dashboard_index_path
   end
 
   private

@@ -107,7 +107,7 @@ describe "As an authenticated user, when I visit '/dashboard'" do
         expect(page).to have_content("Viewing Parties")
         expect(page).to have_content(@movie.title)
         expect(page).to have_content(event.start_date.strftime("%B %d, %Y"))
-        expect(page).to have_content(time)
+        expect(page).to have_content(event.start_date_time.strftime("%I:%M %p"))
         expect(page).to have_content("Hosting")
       end
     end
@@ -131,7 +131,7 @@ describe "As an authenticated user, when I visit '/dashboard'" do
         expect(page).to have_content("Viewing Parties")
         expect(page).to have_content(@movie.title)
         expect(page).to have_content(event.start_date.strftime("%B %d, %Y"))
-        expect(page).to have_content(time)
+        expect(page).to have_content(event.start_date_time.strftime("%I:%M %p"))
         expect(page).to have_content("Invited")
       end
     end

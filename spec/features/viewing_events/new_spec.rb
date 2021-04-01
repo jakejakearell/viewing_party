@@ -52,7 +52,7 @@ describe "As an authenticated user, when I visit the movies detail page and crea
       click_button 'Create Party'
 
       expect(current_path).to eq(dashboard_index_path)
-      # expect(page).to have_content("Viewing Party - #{@movie.title}")
+      expect(page).to have_content("#{@movie.title}")
     end
 
     it "I can create an event without inviting friends" do

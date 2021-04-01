@@ -40,7 +40,7 @@ class MoviesFacade
 
   def self.movie_videos(id)
     data = MovieService.valid_trailers(id)
-    videos = data.map do |info|
+    data.map do |info|
       Trailer.new(info)
     end
   end
