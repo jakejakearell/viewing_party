@@ -109,6 +109,37 @@ RSpec.describe Film do
       expect(data).to be_an(Array)
       expect(data[0]).to be_an(Hash)
       expect(data[0][:author_details]).to be_an(Hash)
+
+    it "returns all videos related to a movie" do
+      VCR.use_cassette('all green mile video info') do
+        green_mile_movie_id = 497
+        data = MovieService.trailer_data(green_mile_movie_id)
+
+        expect(data.class).to be(Array)
+        expect(data.first.class).to be(Hash)
+        expect(data.first).to have_key(:id)
+        expect(data.first).to have_key(:iso_639_1)
+        expect(data.first).to have_key(:iso_3166_1)
+        expect(data.first).to have_key(:key)
+        expect(data.first).to have_key(:name)
+        expect(data.first).to have_key(:site)
+        expect(data.first).to have_key(:size)
+        expect(data.first).to have_key(:type)
+      end
+    end
+
+    it "filters out all results that are not on YouTube and a trailer" do
+      VCR.use_cassette('all green mile video info') do
+        green_mile_movie_id = 497
+        data = MovieService.valid_trailers(green_mile_movie_id)
+
+        expect(data.class).to be(Array)
+        expect(data.first.class).to be(Hash)
+        expect(data.first[:site]).to eq("YouTube")
+        expect(data.first[:type]).to eq("Trailer")
+        expect(data.last[:site]).to eq("YouTube")
+        expect(data.last[:type]).to eq("Trailer")
+      end
     end
   end
 end

@@ -241,7 +241,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Wed, 31 Mar 2021 17:37:12 GMT
+      - Wed, 31 Mar 2021 23:58:37 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -295,7 +295,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Wed, 31 Mar 2021 17:37:13 GMT
+      - Wed, 31 Mar 2021 23:58:37 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -366,7 +366,7 @@ http_interactions:
       X-Cache:
       - RefreshHit from cloudfront
       Via:
-      - 1.1 dc50b0effd72a7b2c19bcb0909cfae82.cloudfront.net (CloudFront)
+      - 1.1 0e018abb74f4918cb6e427c3e0a7ee33.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - DEN50-C2
       X-Amz-Cf-Id:
@@ -417,7 +417,7 @@ http_interactions:
       X-Cache:
       - RefreshHit from cloudfront
       Via:
-      - 1.1 f0b290c4e2273a7586bc6f080031d9bc.cloudfront.net (CloudFront)
+      - 1.1 2c861897aa9389c1f47299b6fea5b59d.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - DEN50-C2
       X-Amz-Cf-Id:

@@ -20,6 +20,7 @@ class MoviesController < ApplicationController
     @movie = MoviesFacade.movie_info(params[:id])
     @cast = MoviesFacade.cast_info(params[:id])
     @reviews = MoviesFacade.movie_reviews(params[:id])
+    @trailers = MoviesFacade.movie_videos(params[:id])
     session[:movie_info] = {movie_db_id: @movie.id, title: @movie.title, runtime: @movie.runtime}
   end
 
