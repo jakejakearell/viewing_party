@@ -109,6 +109,7 @@ RSpec.describe Film do
       expect(data).to be_an(Array)
       expect(data[0]).to be_an(Hash)
       expect(data[0][:author_details]).to be_an(Hash)
+    end
 
     it "returns all videos related to a movie" do
       VCR.use_cassette('all green mile video info') do

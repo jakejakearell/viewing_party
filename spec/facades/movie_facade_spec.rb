@@ -68,6 +68,7 @@ RSpec.describe MoviesFacade do
       expect(result[0]).to be_a(Review)
       expect(result[0].author).to be_a(String)
       expect(result[0].review).to be_a(String)
+    end
 
     it "called Facade movie_search and gets data" do
 
