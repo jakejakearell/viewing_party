@@ -72,9 +72,21 @@ describe "As an authenticated user, when I visit the movies detail page I see" d
       expect(page).to have_button('Create Viewing Party for Movie')
 
       click_button 'Create Viewing Party for Movie'
-  
+
       expect(current_path).to eq(new_viewing_event_path)
       expect(page).to have_content("#{@find_movie.title}")
+    end
+  end
+
+  it "shows the youtube trailer when available" do
+    VCR.use_cassette('single_movie_show_page_vidoes') do
+      visit movie_path(@find_movie.id)
+
+      trailer = MoviesFacade.movie_videos(@find_movie.id)
+
+      within ".trailer" do
+        expect(page.all('iframe', count: trailer.count))
+      end
     end
   end
 end

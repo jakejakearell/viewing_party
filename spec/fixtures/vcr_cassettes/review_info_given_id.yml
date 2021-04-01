@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/238/reviews?api_key=Movie_Key&language=en-US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 31 Mar 2021 21:00:07 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=21600
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - 60e575330f2bfdf37716d2a0a5a83c2a4405645f
+      X-Memc-Age:
+      - '913'
+      X-Memc-Expires:
+      - '20687'
+      Etag:
+      - W/"3207413ba504fefd47d775fb867e2f2a"
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 0e018abb74f4918cb6e427c3e0a7ee33.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - CrxLQfKcPfToqprRelkzePYB-TBhSeSjaA2Kv2kmfXSsp_RuziWv9Q==
+      Age:
+      - '17180'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6MjM4LCJwYWdlIjoxLCJyZXN1bHRzIjpbeyJhdXRob3IiOiJmdXR1cmV0diIsImF1dGhvcl9kZXRhaWxzIjp7Im5hbWUiOiIiLCJ1c2VybmFtZSI6ImZ1dHVyZXR2IiwiYXZhdGFyX3BhdGgiOiIvaHR0cHM6Ly9zZWN1cmUuZ3JhdmF0YXIuY29tL2F2YXRhci9mNDQyNTkzNTZiZjYxMTAwNzBlZDc5OTMyM2Q1MzlkNi5qcGciLCJyYXRpbmciOjEwLjB9LCJjb250ZW50IjoiVGhlIEdvZGZhdGhlciBSZXZpZXcgYnkgQWwgQ2FybHNvblxyXG5cclxuVGhlIEdvZGZhdGhlciBpcyBhIGZpbG0gY29uc2lkZXJlZCBieSBtb3N0IHRvIGJlIG9uZSBvZiB0aGUgZ3JlYXRlc3QgZXZlciBtYWRlLiBGcm9tIFRoZSBBbWVyaWNhbiBGaWxtIEluc3RpdHV0ZSB0byBhcyB2b3RlZCBieSB1c2VycyBvbiB0aGUgSW50ZXJuZXQgTW92aWUgRGF0YWJhc2UgKElNREIpIGl0IGlzIGNvbnNpZGVyIHRvIGJlIG9uZSBvZiB0aGUgYmVzdC4gQXMgYSBmaWxtIHRoYXQgcmFua3MgYXMgaGlnaCBhcyBvdGhlciBtYXN0ZXJwaWVjZXMgaW5jbHVkaW5nIENpdGl6ZW4gS2FuZSwgUHVscCBGaWN0aW9uIGFuZCAxMiBBbmdyeSBNZW4sIFRoZSBHb2RmYXRoZXIgaXMgYW4gZXhjZXB0aW9uYWwgcGllY2Ugb2YgY2luZW1hIGV4Y2VsbGVuY2UgdGhhdCBpcyBmbGF3bGVzcyBhbmQgaXMgc2ltcGx5IHRoZSBwaW5uYWNsZSBjcmltZSBkcmFtYS5cclxuVGhlIEdvZGZhdGhlciByZXZvbHZlcyBhcm91bmQgdGhlIENvcmxlb25l4oCZcywgYW4gSXRhbGlhbiBmYW1pbHkgd2l0aCBkZWVwIHJvb3RzIGluIHRoZSBOZXcgWW9yayBDaXR5IG1hZmlhLiBUaGUgaGVhZCBvZiB0aGUgQ29ybGVvbmXigJlzIGlzIERvbiBWaXRvIENvcmxlb25lLCBhIG1hbiB3aG8gdGFrZXMgY2FyZSBvZiBoaXMgZmFtaWx5IGFuZCBkZW1hbmRzIHJlc3BlY3QgaW4gcmV0dXJuLiBIaXMgc29uIE1pY2hhZWwgaG93ZXZlciwgd2hvIGp1c3QgcmV0dXJuZWQgaG9tZSBmcm9tIFdvcmxkIFdhciBJSSwgZG9lc27igJl0IHdhbnQgdG8gYmVjb21lIGludm9sdmVkIHdpdGggdGhlIGZhbWlseSBidXNpbmVzcy4gVGhlIFNvbGxvenpv4oCZcywgYSBmYW1pbHkgb2YgZHJ1ZyBkZWFsZXJzLCBjb25mcm9udCBEb24gYW5kIHJlcXVlc3QgcHJvdGVjdGlvbiBpbiBleGNoYW5nZSBmb3IgcHJvZml0cyBmcm9tIHRoZSBTb2xsb3p6b+KAmXMgZHJ1ZyBzYWxlcy4gQnV0IERvbiBkZWNsaW5lcyB0aGUgb2ZmZXIsIGZvciBoZSBpcyBhZ2FpbnN0IHNlbGxpbmcgbmFyY290aWNzLiBUaGUgcmVqZWN0ZWQgb2ZmZXIgc3RhcnRzIHdoYXQgdHVybnMgaW50byBhbiBhbGwgb3V0IG1hZmlhIHdhciBiZXR3ZWVuIHRoZSB0d28gZmFtaWxpZXMgd2l0aCBNaWNoYWVsIGRpdmluZyBkZWVwIGludG8gdGhlIG1hZmlhIGxpZmVzdHlsZS5cclxuVGhlIGNoYXJhY3RlcnMgYXJlIHBvcnRyYXllZCBieSBhIGxlZ2VuZGFyeSBhbGwtc3RhciBjYXN0IGluY2x1ZGluZyBNYXJsb24gQnJhbmRvIGFzIERvbiwgQWwgUGFjaW5vIGFzIGhpcyBzb24gTWljaGFlbCBhbmQgSmFtZXMgQ2FhbiBhcyBEb27igJlzIG9sZGVzdCBzb24gU29ubnkuIFRoZSBjYXN0aW5nIGZvciB0aGlzIGZpbG0gaGFzIGJlZW4gY29uc2lkZXJlZCBieSBtYW55IHRvIGJlIHRoZSBiZXN0IGNhc3RlZCBmaWxtIGluIGhpc3RvcnkgZm9yIHRoZWlyIGFzdG9uaXNoaW5nIHBlcmZvcm1hbmNlcy4gQWxsIHRocmVlIG1haW4gYWN0b3JzIHdlcmUgbm9taW5hdGVkIGZvciBhbiBhY2FkZW15IGF3YXJkLCBidXQgb25seSBNYXJsb24gQnJhbmRvIHdvbiBhbiBPc2NhciBmb3IgYmVzdCBhY3RvciBpbiBhIGxlYWRpbmcgcm9sZS4gSXTigJlzIGZhc2NpbmF0aW5nIHRvIHdhdGNoIGhvdyB0aGVzZSBjaGFyYWN0ZXJzIGNoYW5nZSBvdmVyIHRoZSBjb3Vyc2Ugb2YgdGhlIG1vdmllLCB3aXRoIG9uZSBpbiBwYXJ0aWN1bGFyIGNoYW5naW5nIGRyYXN0aWNhbGx5LlxyXG5EaXJlY3RlciBGcmFuY2lzIEZvcmQgQ29wcG9sYSwgYmVpbmcgcmFpc2VkIGluIGFuIEl0YWxpYW4tQW1lcmljYW4gZmFtaWx5IGluIE5ldyBZb3JrLCB1bmRlcnN0b29kIEl0YWxpYW4gY3VsdHVyZSBleGNlcHRpb25hbGx5IGFuZCBtYWRlIHRoZSBmaWxtIHZlcnkgYXV0aGVudGljYWxseS4gRXZlcnl0aGluZyBmcm9tIHRoZSB3ZWRkaW5nIGRhbmNlcyB0byB0aGUgY3Vpc2luZSB0byB0aGUgdGVybXMgdXNlZCBieSB0aGUgY2hhcmFjdGVycyBpbiBTaWNpbGlhbiBjb21lIGZyb20gQ29wcG9sYeKAmXMgZmlyc3QtaGFuZCBrbm93bGVkZ2Ugb2YgSXRhbGlhbi1BbWVyaWNhbiBjdWx0dXJlLiBJdGFsaWFuIGNvbXBvc2VyIE5pbm8gUm90YSBkaWQgYW4gb3V0c3RhbmRpbmcgam9iIG1ha2luZyB0aGUgc291bmR0cmFjayBmb3IgdGhlIGZpbG0sIGRlc3BpdGUgbm90IGdldHRpbmcgdGhlIE9zY2FyIGZvciBiZXN0IG11c2ljIChidXQgaGUgZGlkIHdpbiBhbiBPc2NhciBmb3IgaGlzIHdvcmsgaW4gdGhlIHNlcXVlbCwgVGhlIEdvZGZhdGhlcjogUGFydCBJSSkuIFZpcnR1YWxseSBldmVyeW9uZSByZWNvZ25pemVzIHRoYXQgaWNvbmljIHRydW1wZXQgc29sbyBvbmNlIGl0IHN0YXJ0cyBwbGF5aW5nLiBIZSBhbHNvIHdyb3RlIHRoZSBzY29yZSBmb3IgYW5vdGhlciBncmVhdCBJdGFsaWFuIGZpbG0gOCAxLzIuIFxyXG5UaGlzIGZpbG0gc2hvdWxkIGJlIGltbWVkaWF0ZWx5IGZvbGxvd2VkIHVwIGJ5IGl04oCZcyBzZXF1ZWwsIFRoZSBHb2RmYXRoZXI6IFBhcnQgSUksIHdoaWNoIGFsc28gd29uIGJlc3QgcGljdHVyZS4gVGhlIHNlcmllcyBzdGlsbCBob2xkcyB0aGUgdGl0bGUgb2YgbW9zdCBiZXN0IHBpY3R1cmUgYXdhcmRzIGZvciBhIGZpbG0gc2VyaWVzIHRvIHRoaXMgZGF5LiBUaGV54oCZcmUgYm90aCBmbGF3bGVzcyBjcmltZSBkcmFtYXMgYW5kIGhhdmUgZWFybmVkIHRoZWlyIHRpdGxlcyBhcyBzb21lIG9mIHRoZSBiZXN0IHBpZWNlcyBvZiBjaW5lbWEgZXZlci4gSSB3aWxsIGd1YXJhbnRlZSB5b3Ugd29u4oCZdCBiZSBhYmxlIHRvIHNlZSB0aGlzIGZpbG0gb25seSBvbmNlLCBhcyBpdCBnZXRzIGJldHRlciBhZnRlciBjb250aW51YWwgdmlld2luZ3MuIFRoZXJlIGlzIHJlYWxseSBub3RoaW5nIG1vcmUgdG8gYWRkIG90aGVyIHRoYW4gaWYgeW91IGhhdmVu4oCZdCBzZWVuIHRoaXMgbW92aWUgeWV0LCBpdOKAmXMgYWJvdXQgdGltZSB5b3UgZGlkLiBUaGUgR29kZmF0aGVyIGlzIGEgbW92aWUgeW91IGNhbuKAmXQgcmVmdXNlLiIsImNyZWF0ZWRfYXQiOiIyMDE0LTA0LTEwVDIwOjA5OjQwLjUwMFoiLCJpZCI6IjUzNDZmYTg0MGUwYTI2NWZmYTAwMWUyMCIsInVwZGF0ZWRfYXQiOiIyMDE3LTAyLTAyVDE2OjEyOjU2LjE2NloiLCJ1cmwiOiJodHRwczovL3d3dy50aGVtb3ZpZWRiLm9yZy9yZXZpZXcvNTM0NmZhODQwZTBhMjY1ZmZhMDAxZTIwIn1dLCJ0b3RhbF9wYWdlcyI6MSwidG90YWxfcmVzdWx0cyI6MX0=
+  recorded_at: Thu, 01 Apr 2021 01:46:27 GMT
+recorded_with: VCR 6.0.0
