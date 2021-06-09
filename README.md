@@ -1,8 +1,6 @@
-# Project Title
-**Genevieve**
-Viewing party descriptions. Ensure we have a blurb about the API consumption from Movie DB.
+# Viewing Party
+  - A web app for scheduling movie watch parties with other users on the site.
 
-Mention about using bcrypt for protecting user data and how it's in gemfile and configuration. If you want to use another tool do this to pull it out.
 
 ## Authors
 
@@ -17,9 +15,8 @@ who participated in this project.
 ## Summary
 
   - [Getting Started](#getting-started)
-  - [Database Normalization](#database-normalization)
+  - [Database Normalization](#database-schema)
   - [Running the test suite](#running-the-test-suite)
-  - [Deployment](#deployment)
   - [Built With](#built-with)
   - [How to Contribute](#how-to-contribute)
   - [Roadmap](#roadmap)
@@ -86,24 +83,15 @@ MOVIE_API: <your api key goes here>
 ```sh
 $ rails s
 ```
-## Database Normalization
-**Jacob**
-### DB Schema
+
+## DB Schema
 
 [Database Design](insertlinkhere)
 
-### Self Referential Relationships for Friends Table
-
-Type some stuff
-
 ## Running the test suite
-**Genevieve**
+
 The tests are all built using the [RSpec](https://rspec.info/) and [Capybara](https://github.com/teamcapybara/capybara) test suites.
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-**Harrision**
 
 ## Built With
 
